@@ -13,7 +13,16 @@ import model.ListNode;
  */
 public class AddTwoNumbers {
     public static void main(String args[]) {
+        // l1 = [2,4,3]
+        ListNode l1Next = new ListNode(4,new ListNode(3));
+        ListNode l1 = new ListNode(2,l1Next);
 
+        // l2 = [5,6,4]
+        ListNode l2Next = new ListNode(6,new ListNode(4));
+        ListNode l2 = new ListNode(5,l2Next);
+
+        ListNode result = addTwoNumbers(l1,l2);
+        System.out.println(result);
     }
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int carry =0;
